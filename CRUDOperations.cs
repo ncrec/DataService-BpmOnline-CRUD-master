@@ -48,7 +48,7 @@ namespace DataService_BpmOnline_CRUD
                                 ExpressionType = EntitySchemaQueryExpressionType.Parameter,
                                 Parameter = new Parameter
                                 {
-                                    Value = "\"" + createdOn + "\"",
+                                    Value = "\"" + createdOn.ToUniversalTime() + "\"",
                                     DataValueType = DataValueType.DateTime
                                 }
                             }
@@ -137,7 +137,7 @@ namespace DataService_BpmOnline_CRUD
                 ExpressionType = EntitySchemaQueryExpressionType.Parameter,
                 Parameter = new Parameter
                 {
-                    Value = "\"" + createdOn + "\"",
+                    Value = "\"" + createdOn.ToUniversalTime() + "\"",
                     DataValueType = DataValueType.DateTime
                 }
             };
