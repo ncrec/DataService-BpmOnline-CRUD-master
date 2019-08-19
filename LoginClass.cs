@@ -97,7 +97,7 @@ namespace DataService_BpmOnline_CRUD
             request.Method = ReqestMethod.Post;
             request.ContentType = "application/json";
             request.CookieContainer = LoginClass.AuthCookie;
-            CookieCollection cookieCollection = LoginClass.AuthCookie.GetCookies(serverUri);
+            CookieCollection cookieCollection = LoginClass.AuthCookie.GetCookies(new Uri(requestUri));
             string csrfToken = cookieCollection["BPMCSRF"].Value;
             request.Headers.Add("BPMCSRF", csrfToken);
 
